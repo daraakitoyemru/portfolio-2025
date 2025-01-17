@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const URL = "http://localhost:8080/images";
+  const URL = "https://portfolio-2025-84q3.onrender.com/images";
 
   async function getData(url) {
     try {
@@ -15,11 +15,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   async function placeImage(x, y) {
     const images = await getData(URL);
-    const nextImage = images[i];
-    const img = document.createElement("img");
-    images.forEach((image) => {
-      console.log(image);
-    });
+    // const nextImage = images[i];
+    // const img = document.createElement("img");
+    console.log(images);
   }
   placeImage(400, 500);
 });
