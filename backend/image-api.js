@@ -10,12 +10,20 @@ const PORT = process.env.PORT || 8080;
 const assetPath = path.join(__dirname, "assets");
 
 app.use("/assets", express.static(assetPath));
-app.use(cors());
+app.use(
+  cors({
+    methods: "GET,POST,PATCH,DELETE,OPTIONS",
+    optionsSuccessStatus: 200,
+    origin: "https://portfolio-2025-84q3.onrender.com",
+  })
+);
+app.options("*", cors());
 
 app.get("/images", (req, res) => {
   fs.readdir(assetPath, (error, filename) => {
     if (error) {
-      console.log(error);
+      res.status(500).json({ error: "Error reading directory" });
+      return;
     }
     res.json(filename);
   });
