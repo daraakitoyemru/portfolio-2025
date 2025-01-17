@@ -1,0 +1,23 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+h1 {
+  font-size: 5rem; /* Adjust as needed */
+  font-weight: bold;
+  font-family: "Fontdiner Swanky", cursive;
+  color: #333; /* Change color as needed */
+}
+
+img {
+  position: absolute;
+  top: 500px;
+  left: 400px;
+  transform: translate(-50%, 25%) scale(0.5);
+}
