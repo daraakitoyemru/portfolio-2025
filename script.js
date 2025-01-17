@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const URL = "https://portfolio-2025-84q3.onrender.com";
+  const URL = "https://portfolio-2025-84q3.onrender.com/images";
 
   async function getData(url) {
     try {
