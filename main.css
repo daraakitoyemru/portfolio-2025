@@ -9,15 +9,39 @@ body {
 }
 
 h1 {
-  font-size: 5rem; /* Adjust as needed */
+  font-size: 6rem; /* Adjust as needed */
   font-weight: bold;
   font-family: "Fontdiner Swanky", cursive;
   color: #333; /* Change color as needed */
+  transition: 250ms;
+}
+
+h1:hover {
+  transform: translateY(-10px);
+}
+
+.banner-area {
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  background-color: transparent;
+}
+
+.banner-area h1 {
+  pointer-events: auto; /* Makes the text clickable again */
+  text-align: center;
+  margin: 0;
+  padding: 20px; /* Adjust as needed */
+  cursor: pointer; /* Makes it clear that it's clickable */
 }
 
 img {
   position: absolute;
   top: 500px;
   left: 400px;
-  transform: translate(-50%, 25%) scale(0.5);
+  /* transform: translate(-50%, -50%) scale(0.5); */
+  transform: scale(0.5);
 }
