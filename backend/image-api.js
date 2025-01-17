@@ -14,7 +14,7 @@ app.use(
   cors({
     methods: "GET,POST,PATCH,DELETE,OPTIONS",
     optionsSuccessStatus: 200,
-    origin: "https://portfolio-2025-84q3.onrender.com",
+    origin: "https://portfolio-2025-84q3.onrender.com/",
   })
 );
 app.options("*", cors());
