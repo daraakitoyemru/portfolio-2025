@@ -10,7 +10,7 @@ const PORT = process.env.PORT || 8080;
 const assetPath = path.join(__dirname, "assets");
 
 app.use("/assets", express.static(assetPath));
-app.use(cors({ origin: "https://portfolio-2025-84q3.onrender.com" }));
+app.use(cors({ origin: "https://portfolio-2025-84q3.onrender.com/images" }));
 
 app.get("/images", (req, res) => {
   fs.readdir(assetPath, (error, filename) => {
