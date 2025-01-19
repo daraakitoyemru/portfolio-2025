@@ -10,13 +10,18 @@ const PORT = process.env.PORT || 8080;
 const assetPath = path.join(__dirname, "assets");
 
 app.use("/assets", express.static(assetPath));
+
 app.use(
   cors({
     methods: "GET,POST,PATCH,DELETE,OPTIONS",
     optionsSuccessStatus: 200,
-    origin: "https://portfolio-2025-84q3.onrender.com",
+    origin: [
+      "https://daraakitoyemru.github.io",
+      "https://portfolio-2025-84q3.onrender.com",
+    ],
   })
 );
+
 app.options("*", cors());
 
 app.get("/images", (req, res) => {
