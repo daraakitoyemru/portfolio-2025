@@ -39,6 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const nextImage = images[i];
     const img = document.createElement("img");
     img.src = `./backend/assets/${nextImage}`;
+    img.id = "collage";
 
     document.body.appendChild(img);
     img.onload = () => {
@@ -51,5 +52,11 @@ document.addEventListener("DOMContentLoaded", () => {
     e.preventDefault();
 
     placeImage(e.pageX, e.pageY);
+  });
+
+  const collage = document.querySelectorAll("#collage");
+  window.addEventListener("resize", () => {
+    // Select all images and remove them
+    document.querySelectorAll("img#collage").forEach((img) => img.remove());
   });
 });

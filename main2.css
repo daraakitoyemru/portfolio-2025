@@ -1,0 +1,35 @@
+h1 {
+  font-size: 6rem; /* Adjust as needed */
+  font-weight: bold;
+  font-family: "Fontdiner Swanky", cursive;
+  color: #333; /* Change color as needed */
+  transition: 250ms;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 0.6fr 1.9fr 0.5fr;
+  grid-template-rows: 0.5fr 2.5fr 0.3fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "header header header"
+    "aside main aside2"
+    ". . .";
+}
+
+.header {
+  grid-area: header;
+}
+
+.main {
+  grid-area: main;
+}
+
+.aside {
+  grid-area: aside;
+}
+
+.aside2 {
+  grid-area: aside2;
+}
